@@ -1,0 +1,38 @@
+{
+  "1": {
+    "term": "test",
+    "description": "a test thing",
+    "question": "hello?",
+    "correctAnswer": "goodbye."
+  },
+  "2": {
+    "term": "test",
+    "description": "a test thing",
+    "question": "hello?",
+    "correctAnswer": "goodbye."
+  },
+  "3": {
+    "term": "test",
+    "description": "a test thing",
+    "question": "hello?",
+    "correctAnswer": "goodbye."
+  },
+  "4": {
+    "term": "test",
+    "description": "a test thing",
+    "question": "hello?",
+    "correctAnswer": "goodbye."
+  },
+  "5": {
+    "term": "test",
+    "description": "a test thing",
+    "question": "hello?",
+    "correctAnswer": "goodbye."
+  },
+  "6": {
+    "term": "test",
+    "description": "a test thing",
+    "question": "hello?",
+    "correctAnswer": "goodbye."
+  }
+}
