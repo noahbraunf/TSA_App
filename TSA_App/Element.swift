@@ -26,7 +26,7 @@ struct Element: Decodable, Identifiable, Hashable {
     public var atomicRadius: Double?
     public var firstIonizationEnergy: Double?
     public var radioactive: Bool
-    public var naturallyOccuring: Bool
+    public var naturallyOccurring: Bool
     
     // --MARK: Formatted stuff
     public var formattedEConfig: String {
@@ -42,6 +42,7 @@ struct Element: Decodable, Identifiable, Hashable {
 private func exponentize(str: String, matchWith superscriptTokens: [Character]) -> String {
     
     let supers = [
+        "0": "\u{2070}",
         "1": "\u{00B9}",
         "2": "\u{00B2}",
         "3": "\u{00B3}",
@@ -55,8 +56,9 @@ private func exponentize(str: String, matchWith superscriptTokens: [Character]) 
     var newStr = ""
     var isExp = false
     for (_, char) in str.enumerated() {
-        if  superscriptTokens.contains(char) {
+        if superscriptTokens.contains(char) {
             isExp = true
+            newStr.append(char)
         } else {
             if isExp {
                 let key = String(char)

@@ -9,85 +9,73 @@
 import SwiftUI
 
 struct ElementDetailView: View {
+    let id: Int
+    let name, symbol: String
+    let atomicMass: Double
+    let electronConfig: String
+    var meltingPoint: Double?
+    var boilingPoint: Double?
+    var sublimationPoint: Double?
+    var density: Double?
+    var electronegativity: Double?
+    var atomicRadius: Double?
+    var firstIonizationEnergy: Double?
+    var radioactive: Bool
+    var naturallyOccurring: Bool
+    
     
     var body: some View {
-        
-        VStack(alignment: .leading) {
-            VStack(alignment: .leading) {
-                Text("Element Name")
-                    .font(.largeTitle)
-                    .bold()
-                Text("En")
-                    .font(.headline)
-                    .foregroundColor(.secondary)
-            }.padding(.leading)
-            Image("hydrogen")
-                .resizable()
-                .scaledToFit()
-                .padding(.leading)
-                .padding(.trailing)
-                .padding(.bottom)
+        let informationList: [ElementInfoDetail] = [
+            ElementInfoDetail(description: "Atomic Number", data: "\(id)"),
+            ElementInfoDetail(description: "Atomic Mass", data: "\(atomicMass) amu"),
+            ElementInfoDetail(description: "Atomic Radius", data: unwrapData(data: atomicRadius, unit: "pm")),
+            // --MARK: Electron Stuff
+            ElementInfoDetail(description: "Electron Configuration", data: electronConfig),
+            ElementInfoDetail(description: "Electronegativity", data: unwrapData(data: electronegativity, unit: nil)),
+            ElementInfoDetail(description: "First Ionization Energy", data: unwrapData(data: firstIonizationEnergy, unit: "kJ/mol")),
+            // --MARK: Density & Temp
+            ElementInfoDetail(description: "Density", data: unwrapData(data: density, unit: "g/cm³")),
+            ElementInfoDetail(description: "Melting Point", data: unwrapData(data: meltingPoint, unit: "°K")),
+            ElementInfoDetail(description: "Boiling Point", data: unwrapData(data: boilingPoint, unit: "°K")),
+            ElementInfoDetail(description: "Sublimation Point", data: unwrapData(data: sublimationPoint, unit: "°K")),
+            // --MARK: Other
+            ElementInfoDetail(description: "Radioactive", data: formatBool(data: radioactive)),
+            ElementInfoDetail(description: "Naturally Occurring", data: formatBool(data: naturallyOccurring))
+        ]
+        return VStack {
+            ImageTextView(imageName: name)
             Divider()
-            
-            VStack {
-                Text("Element Information")
-                    .font(.title)
-                    .bold()
-                    .padding()
-                ScrollView {
-                    HStack {
-                        Text("Density:").bold()
-                        Spacer()
-                        Text("Some Density")
-                    }.padding(10)
-                    HStack {
-                        Text("Melting Point:").bold()
-                        Spacer()
-                        Text("Some Melting Point")
-                    }.padding(10)
-                    HStack {
-                        Text("Boiling Point").bold()
-                        Spacer()
-                        Text("Some Boiling Point")
-                    }.padding(10)
-                    HStack {
-                        Text("Sublimation Point:").bold()
-                        Spacer()
-                        Text("Some Sublimation Point")
-                    }.padding(10)
-                    HStack {
-                        Text("Electronegativity:").bold()
-                        Spacer()
-                        Text("Some Electronegativity")
-                    }.padding(10)
-                    HStack {
-                        Text("Electron Config:").bold()
-                        Spacer()
-                        Text("Some Electron Config")
-                    }.padding(10)
-                    HStack {
-                        Text("Electronegativity:").bold()
-                        Spacer()
-                        Text("Some Electronegativity")
-                    }.padding(10)
-                    HStack {
-                        Text("First Ionization Energy:").bold()
-                        Spacer()
-                        Text("Some First Ionization Energy")
-                    }.padding(10)
-                    HStack {
-                        Text("Atomic Mass:").bold()
-                        Spacer()
-                        Text("Some Electronegativity")
-                    }.padding(10)
+            Text("\(name) (\(symbol)) Information")
+                .font(.title)
+                .bold()
+            Divider()
+            ScrollView {
+                ForEach(informationList, id: \.description) { info in
+                    info.body
                 }
             }
-        }
+        }.navigationBarTitle(Text(name), displayMode: .inline)
     }
+}
+
+private func unwrapData(data: Double?, unit: String?) -> String {
+    guard let d = data else {
+        return "Unknown/Not Possible"
+    }
+    
+    if let u = unit {
+        return "\(d) \(u)"
+    } else {
+        return "\(d)"
+    }
+}
+
+private func formatBool(data: Bool) -> String {
+    return data ? "Yes" : "No"
 }
 
 struct ElementDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ElementDetailView()
+        ElementDetailView(id: 1, name: "Hydrogen", symbol: "H", atomicMass: 1.008, electronConfig: "1s\u{00B9}", meltingPoint: 13.99, boilingPoint: 20.271, sublimationPoint: nil, density: 0.00008988, electronegativity: 2.20, atomicRadius: 31, firstIonizationEnergy: 1320.0, radioactive: false, naturallyOccurring: true)
     }
 }

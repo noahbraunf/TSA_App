@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F05DCD123E2480E0086730F /* ElementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F05DCD023E2480E0086730F /* ElementListView.swift */; };
+		4F1921F723E3903F008C69CF /* ElementInfoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1921F623E3903F008C69CF /* ElementInfoDetail.swift */; };
+		4F1921F923E3A70F008C69CF /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1921F823E3A70F008C69CF /* ImageTextView.swift */; };
 		4F27914023D3AA4000FACDBB /* elementData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F27913F23D3AA4000FACDBB /* elementData.json */; };
 		4F611C6B23C7D1DC0002EE26 /* ElementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F611C6A23C7D1DC0002EE26 /* ElementDetailView.swift */; };
 		4FA9ACB623C6921A00693ACB /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA9ACB523C6921A00693ACB /* Element.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F05DCD023E2480E0086730F /* ElementListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementListView.swift; sourceTree = "<group>"; };
+		4F1921F623E3903F008C69CF /* ElementInfoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoDetail.swift; sourceTree = "<group>"; };
+		4F1921F823E3A70F008C69CF /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 		4F27913F23D3AA4000FACDBB /* elementData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = elementData.json; path = ../../../../Downloads/elementData.json; sourceTree = "<group>"; };
 		4F611C6A23C7D1DC0002EE26 /* ElementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementDetailView.swift; sourceTree = "<group>"; };
 		4FA9ACB523C6921A00693ACB /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
@@ -118,6 +124,9 @@
 				4FA9ACB523C6921A00693ACB /* Element.swift */,
 				4FA9ACB723C6951C00693ACB /* ElementFetcher.swift */,
 				4F611C6A23C7D1DC0002EE26 /* ElementDetailView.swift */,
+				4F05DCD023E2480E0086730F /* ElementListView.swift */,
+				4F1921F623E3903F008C69CF /* ElementInfoDetail.swift */,
+				4F1921F823E3A70F008C69CF /* ImageTextView.swift */,
 			);
 			path = TSA_App;
 			sourceTree = "<group>";
@@ -280,6 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1921F723E3903F008C69CF /* ElementInfoDetail.swift in Sources */,
+				4F1921F923E3A70F008C69CF /* ImageTextView.swift in Sources */,
+				4F05DCD123E2480E0086730F /* ElementListView.swift in Sources */,
 				4FA9ACB823C6951C00693ACB /* ElementFetcher.swift in Sources */,
 				4FD7ABF323BBFB6D00DD46A9 /* AppDelegate.swift in Sources */,
 				4FD7ABF523BBFB6D00DD46A9 /* SceneDelegate.swift in Sources */,
@@ -338,7 +350,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -368,7 +380,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -398,7 +410,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -428,7 +440,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;

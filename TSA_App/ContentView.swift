@@ -14,34 +14,22 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            HStack(spacing: 40){
-                Text("化学")
-                    .font(.system(size: 40))
-                    .font(.headline)
-                Text("Chemistry Assistant")
-                    .font(.headline)
-            }.padding(.top)
-            Spacer()
-            
-            List(fetcher.elements) { element in
-                VStack {
-                    HStack {
-                        Text("\(element.name)")
-                            .font(.system(size: 20))
-                        Spacer()
-                        VStack(alignment: .trailing) {
-                            Text("Symbol: \(element.symbol)")
-                                .font(.body)
-                                .foregroundColor(.gray)
-                            Text("Atomic Number: \(element.id)")
-                                .font(.body)
-                                .foregroundColor(.gray)
-                        }
-                    }
+            NavigationView {
+                        
+                    VStack {
+                        Text("Utilities").font(.largeTitle)
+                        Divider()
+                        NavigationLink(destination: ElementListView()) {
+                            Text("Element Encyclopedia")
+                                .buttonStyle(PlainButtonStyle())
+                        }.navigationBarTitle(Text("Chemistry Assistant"))
+                        
+                    }.padding(.init(top: 0, leading: 0, bottom: 100, trailing: 0))
                 }
-            }
+            
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
