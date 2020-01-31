@@ -39,7 +39,7 @@ struct Element: Decodable, Identifiable, Hashable {
     }
 }
 
-private func exponentize(str: String, matchWith superscriptTokens: [Character]) -> String {
+func exponentize(str: String, matchWith superscriptTokens: [Character]) -> String {
     
     let supers = [
         "0": "\u{2070}",
