@@ -16,16 +16,20 @@ struct ContentView: View {
         VStack {
             NavigationView {
                         
-                    VStack {
-                        Text("Utilities").font(.largeTitle)
-                        Divider()
-                        NavigationLink(destination: ElementListView()) {
-                            Text("Element Encyclopedia")
-                                .buttonStyle(PlainButtonStyle())
-                        }.navigationBarTitle(Text("Chemistry Assistant"))
-                        
-                    }.padding(.init(top: 0, leading: 0, bottom: 100, trailing: 0))
+                VStack {
+                    Text("Utilities").font(.title)
+                    Divider()
+                    NavigationLink(destination: ElementListView()) {
+                        Text("Element Encyclopedia").padding().background(Color.init(.lightGray)).cornerRadius(10)
+                    }.padding()
+                    NavigationLink(destination: DensityCalculatorView()) {
+                        Text("Density Calculator").padding().background(Color.init(.lightGray)).cornerRadius(10)
+                    }
+                    
                 }
+                .padding(.init(top: 0, leading: 0, bottom: 100, trailing: 0))
+                .navigationBarTitle(Text("Chemistry Assistant"))
+            }
             
         }
     }
