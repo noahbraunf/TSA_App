@@ -12,10 +12,13 @@ struct ImageTextView: View {
     var imageName: String
     var body: some View {
         if let img = UIImage(named: imageName.lowercased()) {
-            return AnyView(Image(uiImage: img)
-                .resizable()
-                .scaledToFit()
-                .padding())
+            return AnyView(VStack {
+                Image(uiImage: img)
+                    .resizable()
+                    .scaledToFit()
+                
+                Text("Credit to https://images-of-elements.com/").font(.caption).italic()
+                }.padding())
         } else {
             return AnyView(Text("(no images of \(imageName))")
                 .italic()

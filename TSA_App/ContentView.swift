@@ -20,10 +20,10 @@ struct ContentView: View {
                     Text("Utilities").font(.title)
                     Divider()
                     NavigationLink(destination: ElementListView()) {
-                        Text("Element Encyclopedia").padding().background(Color.init(.lightGray)).cornerRadius(10)
+                        Text("Element Encyclopedia").padding().background(Color.secondary.opacity(0.3)).cornerRadius(10)
                     }.padding()
                     NavigationLink(destination: DensityCalculatorView()) {
-                        Text("Density Calculator").padding().background(Color.init(.lightGray)).cornerRadius(10)
+                        Text("Density Calculator").padding().background(Color.secondary.opacity(0.3)).cornerRadius(10)
                     }
                     
                 }
