@@ -41,4 +41,24 @@ class TSA_AppTests: XCTestCase {
         let correctExp = "a\u{2070}\u{00B9}\u{00B2}\u{00B3}\u{2074}b\u{2075}\u{2076}\u{2077}\u{2078}\u{2079}"
         XCTAssert(exp == correctExp)
     }
+    
+    func testSigFigs_Addition() {
+        // TODO: Finish sig fig
+    }
+    
+    func testSigFigs_Subtraction() {
+        // TODO: Finish sig fig
+    }
+    
+    func testSigFigs_Multiplication() {
+        // TODO: Finish sig fig
+    }
+    
+    func testSigFigs_Division() {
+        // TODO: Finish sig fig
+    }
+    
+    func testSigFigs_Multi() {
+        // TODO: Finish sig fig
+    }
 }

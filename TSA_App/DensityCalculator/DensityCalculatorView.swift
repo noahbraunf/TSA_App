@@ -14,7 +14,7 @@ struct DensityCalculatorView: View {
     @State var volume: String = ""
     
     var body: some View {
-        InputView().navigationBarTitle("Density Calculator")
+        InputView().navigationBarTitle("Density Calculator", displayMode: .inline)
             /*Toggle(isOn: $sigFigEnabled) {
                 Text("Significant Figures")
             }*/
