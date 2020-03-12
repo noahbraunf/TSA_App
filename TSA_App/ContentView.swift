@@ -12,6 +12,7 @@ import Combine
 struct ContentView: View {
     @ObservedObject var fetcher = ElementFetcher()
     
+    
     var body: some View {
         VStack {
             NavigationView {

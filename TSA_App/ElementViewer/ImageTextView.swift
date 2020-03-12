@@ -18,7 +18,7 @@ struct ImageTextView: View {
                     .scaledToFit()
                 
                 Text("Credit to https://images-of-elements.com/").font(.caption).italic()
-                }.padding())
+            }.padding())
         } else {
             return AnyView(Text("(no images of \(imageName))")
                 .italic()

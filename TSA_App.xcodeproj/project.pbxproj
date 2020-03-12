@@ -14,6 +14,8 @@
 		4F6AFCAC23EB611A0064BAD5 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6AFCAB23EB611A0064BAD5 /* InputView.swift */; };
 		4F6AFCAE23EB619B0064BAD5 /* FilterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6AFCAD23EB619B0064BAD5 /* FilterInput.swift */; };
 		4F6AFCB023EE4B640064BAD5 /* elementData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F6AFCAF23EE4B640064BAD5 /* elementData.json */; };
+		4FA28A602414477000B51D37 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28A5F2414477000B51D37 /* SearchBar.swift */; };
+		4FA28A6224144F3100B51D37 /* ElementListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28A6124144F3100B51D37 /* ElementListElement.swift */; };
 		4FA9ACB623C6921A00693ACB /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA9ACB523C6921A00693ACB /* Element.swift */; };
 		4FA9ACB823C6951C00693ACB /* ElementFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA9ACB723C6951C00693ACB /* ElementFetcher.swift */; };
 		4FD7ABF323BBFB6D00DD46A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD7ABF223BBFB6D00DD46A9 /* AppDelegate.swift */; };
@@ -53,6 +55,8 @@
 		4F6AFCAB23EB611A0064BAD5 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		4F6AFCAD23EB619B0064BAD5 /* FilterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInput.swift; sourceTree = "<group>"; };
 		4F6AFCAF23EE4B640064BAD5 /* elementData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = elementData.json; sourceTree = "<group>"; };
+		4FA28A5F2414477000B51D37 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		4FA28A6124144F3100B51D37 /* ElementListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementListElement.swift; sourceTree = "<group>"; };
 		4FA9ACB523C6921A00693ACB /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		4FA9ACB723C6951C00693ACB /* ElementFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementFetcher.swift; sourceTree = "<group>"; };
 		4FD7ABEF23BBFB6D00DD46A9 /* TSA_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSA_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +136,7 @@
 				4FD7ABFA23BBFB6D00DD46A9 /* Preview Content */,
 				4FE9C02723E5C8F8003C6E0D /* ElementViewer */,
 				4FE9C02B23E5CEFF003C6E0D /* SignificantFigureNumber.swift */,
+				4FA28A5F2414477000B51D37 /* SearchBar.swift */,
 			);
 			path = TSA_App;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 				4F05DCD023E2480E0086730F /* ElementListView.swift */,
 				4F1921F623E3903F008C69CF /* ElementInfoDetail.swift */,
 				4F1921F823E3A70F008C69CF /* ImageTextView.swift */,
+				4FA28A6124144F3100B51D37 /* ElementListElement.swift */,
 			);
 			path = ElementViewer;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA28A6224144F3100B51D37 /* ElementListElement.swift in Sources */,
 				4F1921F723E3903F008C69CF /* ElementInfoDetail.swift in Sources */,
 				4F1921F923E3A70F008C69CF /* ImageTextView.swift in Sources */,
 				4F05DCD123E2480E0086730F /* ElementListView.swift in Sources */,
@@ -324,6 +331,7 @@
 				4FD7ABF323BBFB6D00DD46A9 /* AppDelegate.swift in Sources */,
 				4FD7ABF523BBFB6D00DD46A9 /* SceneDelegate.swift in Sources */,
 				4FD7ABF723BBFB6D00DD46A9 /* ContentView.swift in Sources */,
+				4FA28A602414477000B51D37 /* SearchBar.swift in Sources */,
 				4F6AFCAE23EB619B0064BAD5 /* FilterInput.swift in Sources */,
 				4F611C6B23C7D1DC0002EE26 /* ElementDetailView.swift in Sources */,
 				4FA9ACB623C6921A00693ACB /* Element.swift in Sources */,
@@ -433,6 +441,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -486,6 +495,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

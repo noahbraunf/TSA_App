@@ -24,6 +24,8 @@ struct ElementDetailView: View {
     var naturallyOccurring: Bool
     
     
+    
+    
     var body: some View {
         let informationList: [ElementInfoDetail] = [
             ElementInfoDetail(description: "Atomic Number", data: "\(id)"),
